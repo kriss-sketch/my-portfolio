@@ -26,9 +26,9 @@ function Navigation() {
         </button>
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
-          <li><a onClick={() => scrollToSection('about')}>About</a></li>
-          <li><a onClick={() => scrollToSection('projects')}>Projects</a></li>
-          <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
+          <li><button onClick={() => scrollToSection('about')} className="nav-button">About</button></li>
+          <li><button onClick={() => scrollToSection('projects')} className="nav-button">Projects</button></li>
+          <li><button onClick={() => scrollToSection('contact')} className="nav-button">Contact</button></li>
         </ul>
       </div>
     </nav>
