@@ -36,22 +36,22 @@ function Contact() {
         <div className="contact-info">
           <div className="info-item">
             <h3>Email</h3>
-            <p><a href="mailto:your@email.com">your@email.com</a></p>
+            <p><a href="https://mail.google.com/mail/u/0/?hl=en-GB#inbox">krisgula221995@gmail.com</a></p>
           </div>
           <div className="info-item">
             <h3>Phone</h3>
-            <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            <p><a href="tel:+639278582028">+63 (927) 858-2028</a></p>
           </div>
           <div className="info-item">
             <h3>Location</h3>
-            <p>Your City, Your Country</p>
+            <p>Butuan City, Philippines</p>
           </div>
           <div className="social-links">
             <h3>Follow Me</h3>
             <div className="social-icons">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
             </div>
           </div>
         </div>

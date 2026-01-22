@@ -13,13 +13,10 @@ function About() {
       <div className="about-content">
         <h2>About Me</h2>
         <p>
-          I'm a passionate full-stack developer with expertise in React.js, JavaScript, and modern web technologies. 
-          I love building responsive, user-friendly applications that solve real-world problems.
+         I’m a Computer Science graduate and Software Developer who enjoys building practical web applications that are easy to use and maintain. I work with both frontend and backend fundamentals, focusing on clean structure, clarity, and real-world usability.
         </p>
         <p>
-          With a focus on clean code and best practices, I strive to create scalable solutions that provide 
-          excellent user experiences. When I'm not coding, you can find me exploring new technologies or contributing 
-          to open-source projects.
+          I’m continuously improving my skills by working on hands-on projects, learning modern frameworks, and exploring how systems and deployments support reliable applications.
         </p>
         
         <div className="skills">
