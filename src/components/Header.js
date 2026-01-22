@@ -5,6 +5,7 @@ function Header() {
   return (
     <header className="header">
       <div className="header-content">
+        <img src="/images/profile.jpg" alt="Krista's profile" className="profile-picture" />
         <h1 className="logo">Krista Japona</h1>
         <p className="tagline">Full Stack Developer | React Specialist</p>
         <p className="hero-statement">
