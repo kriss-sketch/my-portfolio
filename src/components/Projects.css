@@ -6,14 +6,17 @@
 
 .projects-container h2 {
   font-size: 2rem;
-  color: #333;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
   margin-bottom: 15px;
 }
 
 .projects-intro {
   text-align: center;
-  color: #666;
+  color: var(--text-secondary);
   font-size: 1rem;
   margin-bottom: 50px;
   max-width: 700px;
@@ -28,21 +31,22 @@
 }
 
 .project-card {
-  background-color: white;
+  background-color: var(--card-bg);
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   position: relative;
+  border: 1px solid var(--border-color);
 }
 
 .project-type-badge {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--primary-gradient);
   color: white;
   padding: 5px 12px;
   border-radius: 20px;
@@ -53,30 +57,34 @@
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 25px rgba(102, 126, 234, 0.15);
 }
 
 .project-card h3 {
   font-size: 1.3rem;
-  color: #667eea;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 15px;
   padding-right: 100px;
 }
 
 .project-card p {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
 .highlights {
-  background-color: #f9f9f9;
+  background-color: var(--card-bg);
   padding: 12px 15px;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid;
+  border-image: var(--primary-gradient) 1;
   font-size: 0.9rem;
   font-style: italic;
-  color: #555;
+  color: var(--text-secondary);
   margin-bottom: 20px !important;
 }
 
@@ -89,24 +97,33 @@
 
 .tech-badge {
   display: inline-block;
-  background-color: #f0f0f0;
-  color: #667eea;
+  background-color: var(--bg-secondary);
+  background: var(--secondary-gradient);
+  color: white;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.tech-badge:hover {
+  transform: scale(1.05);
 }
 
 .project-link {
-  color: #667eea;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
   margin-top: auto;
 }
 
 .project-link:hover {
-  color: #764ba2;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
