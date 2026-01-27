@@ -111,6 +111,17 @@
   border-image: var(--primary-gradient) 1;
 }
 
+.error-message {
+  background-color: rgba(255, 69, 69, 0.1);
+  color: #ff4545;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 500;
+  border-left: 4px solid #ff4545;
+}
+
 .form-group {
   margin-bottom: 20px;
   display: flex;
@@ -155,9 +166,15 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.submit-btn:hover {
+.submit-btn:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
 }
 
 @media (max-width: 768px) {

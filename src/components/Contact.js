@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 function Contact() {
@@ -9,6 +10,13 @@ function Contact() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('HSUD_ZoxTiKEv1CMo');
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,15 +24,44 @@ function Contact() {
       ...prev,
       [name]: value
     }));
+    setError(''); // Clear error when user starts typing
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    setTimeout(() => setSubmitted(false), 3000);
+    setLoading(true);
+    setError('');
+
+    // Email parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      to_email: 'krisgula221995@gmail.com', 
+      message: formData.message,
+      reply_to: formData.email
+    };
+
+    // Send email
+    emailjs
+      .send(
+        'service_q0m247b', 
+        'template_31zcqyg', 
+        templateParams
+      )
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setSubmitted(true);
+          setFormData({ name: '', email: '', message: '' });
+          setLoading(false);
+          setTimeout(() => setSubmitted(false), 3000);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+          setError('Failed to send message. Please try again.');
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -58,6 +95,7 @@ function Contact() {
 
         <form className="contact-form" onSubmit={handleSubmit}>
           {submitted && <div className="success-message">✓ Thank you! I'll get back to you soon.</div>}
+          {error && <div className="error-message">✗ {error}</div>}
           
           <div className="form-group">
             <label htmlFor="name">Name</label>
@@ -95,7 +133,9 @@ function Contact() {
             ></textarea>
           </div>
 
-          <button type="submit" className="submit-btn">Send Message</button>
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
       </div>
     </div>
