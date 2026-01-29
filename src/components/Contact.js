@@ -6,6 +6,7 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: ''
   });
 
@@ -36,7 +37,8 @@ function Contact() {
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
-      to_email: 'krisgula221995@gmail.com', 
+      to_email: 'krisgula221995@gmail.com',
+      subject: formData.subject,
       message: formData.message,
       reply_to: formData.email
     };
@@ -52,7 +54,7 @@ function Contact() {
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
           setSubmitted(true);
-          setFormData({ name: '', email: '', message: '' });
+          setFormData({ name: '', email: '', subject: '', message: '' });
           setLoading(false);
           setTimeout(() => setSubmitted(false), 3000);
         },
@@ -86,9 +88,9 @@ function Contact() {
           <div className="social-links">
             <h3>Follow Me</h3>
             <div className="social-icons">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+              <a href="https://github.com/kriss-sketch" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="https://discord.com/users/ik.kaii" target="_blank" rel="noopener noreferrer" aria-label="Discord">Discord</a>
+              <a href="https://www.facebook.com/krista.japona" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
             </div>
           </div>
         </div>
@@ -116,6 +118,18 @@ function Contact() {
               id="email"
               name="email"
               value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
               onChange={handleChange}
               required
             />

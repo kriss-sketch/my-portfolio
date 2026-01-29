@@ -1,11 +1,14 @@
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: var(--card-shadow);
-  transition: background-color 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 20px var(--glass-glow);
+  transition: backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--glass-border);
 }
 
 .about-content h2 {
@@ -41,12 +44,22 @@
 }
 
 .skill-card {
-  background-color: var(--card-bg);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
   border-left: 4px solid;
   border-image: var(--primary-gradient) 1;
-  transition: background-color 0.3s ease;
+  transition: backdrop-filter 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.skill-card:hover {
+  backdrop-filter: blur(25px);
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
 }
 
 .skill-card h4 {
@@ -99,11 +112,12 @@
 }
 
 .learning-card {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   padding: 20px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  transition: backdrop-filter 0.3s ease;
 }
 
 .learning-card h4 {

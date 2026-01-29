@@ -1,11 +1,13 @@
 .navbar {
-  background-color: var(--bg-primary);
-  box-shadow: var(--card-shadow);
+  background: rgba(30, 41, 82, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  border-bottom: 1px solid var(--border-color);
+  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .nav-content {

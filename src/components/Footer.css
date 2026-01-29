@@ -1,10 +1,14 @@
 .footer {
-  background: var(--primary-gradient);
+  background: rgba(30, 41, 82, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   color: white;
   text-align: center;
   padding: 30px 20px;
   margin-top: auto;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  border-top: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {

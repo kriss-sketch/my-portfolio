@@ -1,11 +1,28 @@
 .header {
-  background: var(--primary-gradient);
+  background: rgba(30, 41, 82, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
   color: white;
   padding: 80px 20px;
   text-align: center;
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(-10px) translateX(-10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-30px) translateX(-15px); }
+  66% { transform: translateY(-15px) translateX(15px); }
+  100% { transform: translateY(0px) translateX(0px); }
 }
 
 .header::before {
@@ -17,8 +34,23 @@
   height: 500px;
   background: var(--accent-gradient);
   border-radius: 50%;
-  opacity: 0.1;
+  opacity: 0.08;
   z-index: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+  border-radius: 50%;
+  opacity: 0.06;
+  z-index: 0;
+  animation: float-slow 8s ease-in-out infinite;
 }
 
 .header-content {
@@ -33,31 +65,39 @@
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid white;
+  border: none;
   margin-bottom: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease;
+  box-shadow: 0 0 0 3px #00d4ff, 0 0 30px rgba(0, 212, 255, 0.4), 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .profile-picture:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px #0099ff, 0 0 40px rgba(0, 212, 255, 0.6), 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 10px;
   font-weight: 700;
-  background: linear-gradient(135deg, #fff 0%, #f0f0ff 100%);
+  background: var(--primary-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: 1px;
 }
 
 .tagline {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.8rem;
+  font-weight: 600;
   letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.9);
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-top: 10px;
 }
 
 .hero-statement {
