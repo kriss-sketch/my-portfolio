@@ -9,8 +9,16 @@ function Header() {
         <h1 className="logo">Krista Japona</h1>
         <p className="tagline">Software Developer</p>
         <p className="hero-statement">
-          I am a Software Developer with a Computer Science background, focused on building reliable, user-centered web applications while continuously growing my technical skills.
+          Software Developer focused on building reliable, user-centered web applications with clean architecture and real-world usability.
         </p>
+        <div className="cta-buttons">
+          <button className="cta-button primary" onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}>
+            View Projects
+          </button>
+          <button className="cta-button secondary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+            Contact Me
+          </button>
+        </div>
       </div>
     </header>
   );

@@ -9,7 +9,7 @@ function Projects() {
       description: 'A CRUD-based web application that allows users to create, view, update, and delete records through a clean and intuitive interface.',
       type: 'What I Know',
       technologies: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-      highlights: 'Strengthened my core web development skills by building reliable CRUD functionality and structured database interactions.',
+      highlights: 'Strengthened my understanding of full-stack development and structured database operations.',
       link: 'https://github.com/yourusername/management-system'
     },
     {
@@ -18,7 +18,7 @@ function Projects() {
       description: 'Designed and simulated a network infrastructure integrating wired and wireless devices, DNS, and web servers to ensure reliable connectivity and service delivery.',
       type: 'What I Learned',
       technologies: ['Packet Tracer', 'Networking Concepts', 'Web Servers'],
-      highlights: 'Designed and simulated reliable network and web infrastructure, strengthening my understanding of how applications are delivered and supported in real environments.',
+      highlights: ' Improved my understanding of networking fundamentals and real-world infrastructure design.',
       link: 'https://github.com/yourusername/network-infrastructure'
     },
     {
@@ -27,7 +27,7 @@ function Projects() {
       description: 'A responsive, modern portfolio built using React/Next.js, focused on performance, accessibility, and user experience, and deployed using a CI/CD workflow.',
       type: 'What I\'m Aspiring To',
       technologies: ['Next.js', 'React', 'Github', 'Vercel'],
-      highlights: 'Built a modern, user-focused web application using React and Next.js, applying performance optimization, accessibility, and CI/CD deployment practices.',
+      highlights: 'Gained hands-on experience building and deploying a production-ready web application.',
       link: 'https://github.com/yourusername/portfolio'
     }
   ];

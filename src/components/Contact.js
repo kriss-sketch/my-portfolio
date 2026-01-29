@@ -69,7 +69,8 @@ function Contact() {
   return (
     <div className="contact-container">
       <h2>Get In Touch</h2>
-      <p className="contact-intro">I'd love to hear from you! Feel free to reach out with any inquiries.</p>
+      <p className="contact-intro">I’m open to software developer opportunities and collaborations.
+Feel free to reach out if you’d like to work together.</p>
       
       <div className="contact-content">
         <div className="contact-info">

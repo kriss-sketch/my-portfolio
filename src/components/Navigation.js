@@ -17,7 +17,7 @@ function Navigation() {
   return (
     <nav className="navbar">
       <div className="nav-content">
-        <div className="nav-brand">Portfolio</div>
+        <button className="nav-brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Portfolio</button>
         
         <button className="hamburger" onClick={toggleMenu}>
           <span></span>
